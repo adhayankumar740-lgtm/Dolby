@@ -3,10 +3,10 @@ from pyrogram import Client, filters
 from pytgcalls import PyTgCalls
 
 # Load configuration (API_ID, API_HASH, BOT_TOKEN, SESSION, etc.) from environment or config file.
-api_id = ...        # e.g. int(os.environ["API_ID"])
-api_hash = "..."    # e.g. os.environ["API_HASH"]
-bot_token = "..."   # Telegram Bot token from BotFather (optional if using bot commands)
-session_str = "..." # Pyrogram string session for user account
+api_id = 29684831        # e.g. int(os.environ["API_ID"])
+api_hash = "33c51717f00a7b7431dbc8e1894c8d58"    # e.g. os.environ["API_HASH"]
+bot_token = "8004423318:AAHwZWDNodfKi-npwKY9kMc1LS0InTAFuPY"   # Telegram Bot token from BotFather (optional if using bot commands)
+session_str = "BQE1hZwAgJCqhVVjJ6fiEgeZtu_TD7kqwI0mR3D2wRhy3e17P5eVqV_aG7enGYx_vEOwrrcUAn8Tm2o_w3ciXNghc-tMJNgNgsZSt8fGyo02kgkRLVVxPcMYnDc40it2yfTnUcNC9XWOK6DHY0VWiNkKsoPU0vvpjOvI9Y4J814Hv48gPA5kQNcSEKWpZ5ovDaa7ovv-M5jb29XI8Yz-honbQKElb-ooUSX3CMT0JdumN5AtdOGsLj_-H94EJzd7ac_NF8yuh_eNhcD3BUKNuGIEbVhc65_SLCxvAqKwGp23GNKrdZ1G-x_SH1bnxFQboczUIVGiD11UknlhdZiqIA-K3NQKqQAAAAHo78rIAA" # Pyrogram string session for user account
 
 # Create Pyrogram clients
 bot = Client("bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
