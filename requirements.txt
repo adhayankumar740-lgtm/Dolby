@@ -1,3 +1,11 @@
+pyrogram>=2.0.108
+tgcrypto
+py-tgcalls==1.2.7
+yt-dlp
+flask
+python-dotenv
+imageio-ffmpeg
+'''
 pyrogram==1.4.16
 tgcrypto
 tgcalls==3.0.0.dev6
@@ -6,3 +14,4 @@ yt-dlp
 flask
 python-dotenv
 imageio-ffmpeg
+'''
