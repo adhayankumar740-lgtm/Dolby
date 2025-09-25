@@ -2,6 +2,7 @@
 pyrogram[tgcrypto]
 py-tgcalls
 yt-dlp
+tgcrypto
 # Optional (if adding lyrics support):
 lyricsgenius
 # Other dependencies as needed...
