@@ -1,8 +1,5 @@
-# requirements.txt
-pyrogram[tgcrypto]
-py-tgcalls
-yt-dlp
+pyrogram==2.0.106
 tgcrypto
-# Optional (if adding lyrics support):
+ntgcalls==2.0.6
+yt-dlp
 lyricsgenius
-# Other dependencies as needed...
