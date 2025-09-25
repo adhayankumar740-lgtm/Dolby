@@ -1,5 +1,6 @@
-pyrogram==2.0.106
+Pyrogram>=2.0.106
 tgcrypto
-ntgcalls==2.0.6
+py-tgcalls>=4.0.0
+youtube-search-python
 yt-dlp
-lyricsgenius
+FFmpeg-python
