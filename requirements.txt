@@ -1,6 +1,6 @@
-Pyrogram>=2.0.106
+pyrogram
 tgcrypto
-py-tgcalls>=4.0.0
-youtube-search-python
+pytgcalls
 yt-dlp
-FFmpeg-python
+flask
+python-dotenv
