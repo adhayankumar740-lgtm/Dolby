@@ -16,12 +16,24 @@ os.environ["PATH"] += os.pathsep + os.path.dirname(ffmpeg_path)
 
 # === Initialize Pyrogram Client and PyTg
 
-client = Client.from_session_string(
-    config.SESSION,
-    api_id=config.API_ID,
-    api_hash=config.API_HASH,
-    name="userbot"   # optional, session file ke liye
+from pyrogram import Client
+from pyrogram.types import StringSession
+from config import API_ID, API_HASH, SESSION
+
+# Pyrogram v2.0.106 me StringSession use karke client create karo
+client = Client(
+    StringSession(SESSION),
+    api_id=API_ID,
+    api_hash=API_HASH,
+    name="userbot"   # optional, session file ke liye short name
 )
+
+# PyTgCalls initialize
+from py_tgcalls import PyTgCalls
+pytgcalls = PyTgCalls(client)
+
+# Start the client
+client.start()
 client.start()
 
 pytgcalls = PyTgCalls(client)
