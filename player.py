@@ -14,8 +14,8 @@ import config  # contains API_ID, API_HASH, SESSION (string session or path)
 ffmpeg_path = get_ffmpeg_exe()  # bundled ffmpeg binary path2
 os.environ["PATH"] += os.pathsep + os.path.dirname(ffmpeg_path)
 
-# === Initialize Pyrogram Client and PyTgCalls ===
-client = Client(config.SESSION, api_id=config.API_ID, api_hash=config.API_HASH)
+# === Initialize Pyrogram Client and PyTg
+client = Client("userbot", api_id=config.API_ID, api_hash=config.API_HASH, session_string=config.SESSION)
 client.start()
 
 pytgcalls = PyTgCalls(client)
