@@ -17,7 +17,7 @@ os.environ["PATH"] += os.pathsep + os.path.dirname(ffmpeg_path)
 # === Initialize Pyrogram Client and PyTg
 
 from pyrogram import Client
-from pyrogram.types import StringSession
+from pyrogram.sessions import StringSession
 from config import API_ID, API_HASH, SESSION
 
 # Pyrogram v2.0.106 me StringSession use karke client create karo
