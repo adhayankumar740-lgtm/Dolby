@@ -1,23 +1,15 @@
 import os
 from pyrogram import Client, filters
-from ntgcalls import PyTgCalls
+from ntgcalls import Ntgcalls
 from ntgcalls.types.input_stream import InputAudioStream
 from ntgcalls.types.input_stream.quality import HighQualityAudio
 
-# Load configuration from environment variables
-API_ID = int(os.environ["API_ID"])
-API_HASH = os.environ["API_HASH"]
-BOT_TOKEN = os.environ.get("BOT_TOKEN")   # For bot
-SESSION = os.environ["SESSION"]           # String session for userbot
-CHAT_ID = int(os.environ.get("CHAT_ID", 0))  # Optional fixed chat
-
 # Pyrogram clients
-bot = Client("bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 user = Client("user", api_id=API_ID, api_hash=API_HASH, session_string=SESSION)
+bot = Client("bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
-# VC client (ntgcalls)
-voice = PyTgCalls(user)
-
+# ntgcalls client
+voice = Ntgcalls(user)
 # Song queue
 queue = {}
 
