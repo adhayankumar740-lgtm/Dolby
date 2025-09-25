@@ -17,28 +17,22 @@ os.environ["PATH"] += os.pathsep + os.path.dirname(ffmpeg_path)
 # === Initialize Pyrogram Client and PyTg
 
 from pyrogram import Client
-from pyrogram.sessions import StringSession
 from config import API_ID, API_HASH, SESSION
+from py_tgcalls import PyTgCalls
 
-# Pyrogram v2.0.106 me StringSession use karke client create karo
-
-client = Client(
-    StringSession(SESSION),
+# Pyrogram v2 client using session string
+client = Client.from_session_string(
+    SESSION,
     api_id=API_ID,
     api_hash=API_HASH,
     name="userbot"
 )
-# PyTgCalls initialize
-from py_tgcalls import PyTgCalls
+
+# PyTgCalls init
 pytgcalls = PyTgCalls(client)
 
-# Start the client
+# Start client
 client.start()
-client.start()
-
-pytgcalls = PyTgCalls(client)
-pytgcalls.start()
-
 # Per-chat queues and current track titles
 queues = defaultdict(list)  # chat_id -> list of (stream_url, title)
 current_track = {}         # chat_id -> title of currently playing track
