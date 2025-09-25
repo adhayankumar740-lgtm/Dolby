@@ -4,7 +4,7 @@ from collections import defaultdict
 
 from pyrogram import Client
 from pytgcalls import PyTgCalls
-from pytgcalls.types.input_stream import AudioImagePiped, AudioVideoPiped
+from pytgcalls.types import MediaStream
 
 from imageio_ffmpeg import get_ffmpeg_exe
 import ytdl  # Assumed helper module using yt-dlp (must provide an async fetch, see below)
