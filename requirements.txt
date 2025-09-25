@@ -4,3 +4,4 @@ pytgcalls
 yt-dlp
 flask
 python-dotenv
+imageio-ffmpeg
