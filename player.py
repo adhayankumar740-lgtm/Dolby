@@ -15,7 +15,13 @@ ffmpeg_path = get_ffmpeg_exe()  # bundled ffmpeg binary path2
 os.environ["PATH"] += os.pathsep + os.path.dirname(ffmpeg_path)
 
 # === Initialize Pyrogram Client and PyTg
-client = Client("userbot", api_id=config.API_ID, api_hash=config.API_HASH, session_string=config.SESSION)
+
+client = Client.from_session_string(
+    config.SESSION,
+    api_id=config.API_ID,
+    api_hash=config.API_HASH,
+    name="userbot"   # optional, session file ke liye
+)
 client.start()
 
 pytgcalls = PyTgCalls(client)
